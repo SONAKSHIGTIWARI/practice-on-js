@@ -1,53 +1,23 @@
-function outer() {
-    let counter = 0;
-  
-    return function inner() {
-      counter++;
-      console.log(counter);
-    };
-  }
-  
-  const increment = outer();
-  increment(); 
-  increment(); // 2
+const form = document.getElementById('registration-form');
+        const errorMessage = document.getElementById('error-message');
 
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let errorText = '';
+            const name = document.getElementById('student-name').value;
+            const studentId = document.getElementById('student-id').value;
+            const email = document.getElementById('email').value;
+            const elective = document.getElementById('elective').value;
 
-// Using Promises
-function fetchData() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => resolve('Data fetched'), 2000);
-    });
-  }
-  
-  fetchData()
-    .then(response => console.log(response))
-    .catch(error => console.log(error));
-  
-  // Using Async/Await
-  async function getData() {
-    try {
-      const result = await fetchData();
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  
-getData();
+            if (!name || !studentId || !email || !elective) {
+                errorText = 'All fields are required!';
+            }
 
-// Object Destructuring
-const person = { name: 'John', age: 30, city: 'New York' };
-const { name, age, city } = person;
-
-console.log(name); // John
-console.log(age);  // 30
-console.log(city); // New York
-
-// Array Destructuring
-const numbers = [1, 2, 3];
-const [a, b] = numbers;
-
-console.log(a); // 1
-console.log(b); // 2
-
-  
+            if (errorText) {
+                errorMessage.textContent = errorText;
+            } else {
+                errorMessage.textContent = '';
+                alert('Registration Successful!');
+                // Here you could send the data to the server using fetch or an AJAX request
+            }
+        });
