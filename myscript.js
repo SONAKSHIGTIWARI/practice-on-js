@@ -1,104 +1,255 @@
-/*/
-let data=1234;
-console.log(data);
-console.log(1234);
-console.log(true);
-console.log("hello js!");
-//arithmatic operations://
-let num1=40;
-let num2=90;
-console.log(num1+num2);
-console.log(num1-num2);
-console.log(num1*num2);
-console.log(num1/num2);
-console.log(num1%num2);
-// information
-let string1="Hi,"
-let string2="i'm kalpana"
-let age=20;
-let info="i am java developer"
-console.log(string1+string2+ " "+"my age is"+ age+" "+ info);
-// by input statements
-let string3="i'am";
-let name=prompt("Enter your name:")
-let userage=prompt("Enter your current age");
-let skills=prompt("Enter your skills:");
-console.log(string1+string3+" "+name+" "+"my age is"+" "+ userage+" "+"i am"+" "+skills+" " +"developer");
-
-// input number//
-let a=prompt("Enter first number:");
-let b=prompt("Enter second number:");
+/*
+// Task
+//Take 2 number as user input and perform arithmetic operation..
+let a=Number(prompt("Enter first number:"));
+let b=Number(prompt("Enter second number:"));
 console.log(a+b);
 console.log(a-b);
 console.log(a*b);
 console.log(a/b);
 console.log(a%b);
+
+// grater of (2/3/4)number using logical operator
+let num1=Number(prompt("Enter First number!"));
+let num2=Number(prompt("Enter Second number"));
+if (num1>num2){
+    console.log("1st number is greater");
+}
+else{
+    console.log("Second number is greater");
+}
+
+// among 3 numbers
+let p=Number(prompt("Enter the value of p"));
+let q=Number(prompt("Enter the value of q"));
+let r=Number(prompt("Enter the value of r"));
+
+if(p>q && p>r){
+    console.log("p is greater");
+}
+else{
+    if(q>p && q>r){
+        console.log("q is greater");
+    }
+    else{
+        console.log("r is greater");;
+    }
+}
+    
+// among 4 humber
+let w=Number(prompt("Enter the value of w"));
+let x=Number(prompt("Enter the value of x"));
+let y=Number(prompt("Enter the value of y"));
+let z=Number(prompt("Enter the value of z"));
+if(w>x && w>y && w>z){
+    console.log("w is greater");
+}
+else{
+    if(x>w && x>y && x>z){
+        console.log("x is greater");
+    }
+    else{
+        if(y>w && y>x && y>z){
+            console.log("y is greater");
+        }
+        else{
+            console.log("z is greater");
+        }
+    }
+}
+// make 3 menu driven program
+// 1. calculator
+let choice = prompt("Calculator Menu:\n1. Add\n2. Subtract\n3. Multiply\n4. Divide");
+
+let num1 = parseFloat(prompt("Enter first number:"));
+let num2 = parseFloat(prompt("Enter second number:"));
+let result;
+
+switch (choice) {
+  case "1":
+    result = num1 + num2;
+    alert("Result: " + result);
+    break;
+  case "2":
+    result = num1 - num2;
+    alert("Result: " + result);
+    break;
+  case "3":
+    result = num1 * num2;
+    alert("Result: " + result);
+    break;
+  case "4":
+    if (num2 !== 0) {
+      result = num1 / num2;
+      window.alert("Result: " + result);
+    } else {
+      alert("Cannot divide by zero.");
+    }
+    break;
+  default:
+    alert("Invalid choice.");
+}
+// 2. Day of the Week Finder
+let dayNumber = prompt("Enter a number (1-7) to get the day of the week:");
+
+switch (dayNumber) {
+  case "1":
+    alert("Sunday");
+    break;
+  case "2":
+    alert("Monday");
+    break;
+  case "3":
+    alert("Tuesday");
+    break;
+  case "4":
+    alert("Wednesday");
+    break;
+  case "5":
+    alert("Thursday");
+    break;
+  case "6":
+    alert("Friday");
+    break;
+  case "7":
+    alert("Saturday");
+    break;
+  default:
+    alert("Invalid number. Enter 1 to 7.");
+}
+
+// 3. Simple Grade Checker
+
+let grade = prompt("Enter your grade letter (A, B, C, D, F):").toUpperCase();
+
+switch (grade) {
+  case "A":
+    alert("Excellent!");
+    break;
+  case "B":
+    alert("Very Good");
+    break;
+  case "C":
+    alert("Good");
+    break;
+  case "D":
+    alert("Needs Improvement");
+    break;
+  case "F":
+    alert("Failed");
+    break;
+  default:
+    alert("Invalid grade.");
+}
+
+//3.Leap year chekar.
+let year = prompt("Enter a year:");
+if (year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+    alert(year + " is a leap year.");
+  } else {
+    alert(year + " is not a leap year.");
+  }
+} else {
+  alert("No year entered!");
+}
+
+
+// Ask the user for their score
+let score = Number(prompt("Enter your score:"));
+
+if (score >= 90) {
+    console.log("Grade:A");
+} else if (score >= 80) {
+  console.log("Grade:B");
+} else if (score >= 70) {
+  console.log("Grade:C");
+} else if (score >= 60) {
+  console.log("Grade:D");
+} else {
+  console.log("you are Fail");
+}
+
+
+let evennumber=Number(prompt("Enter the number to check even or odd"));
+(evennumber%2==0)? console.log("Number is even") : console.log("Number is odd");
+
+ i =1
+whiletle(i<=100){
+  if(i %2==0){
+    console.log(i);
+  }
+  i++;
+}
+
+let i =1;
+while(i<=100){
+  if(i %2==1){
+    console.log(i);
+  }
+  i++;
+}
+
+
+i =1
+while(i<=100){
+  if(i %3==0){
+    console.log(i);
+  }
+  i++;
+}
+
+let year=1000;
+while(year<=2050){
+  if (year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+      console.log(year + " is a leap year.");
+    } else {
+     console.log(year + " is not a leap year.");
+    }
+  } else {
+    console.log("No year entered!");
+  }
+  year++;
+}
+
+
+let num=5;
+let fact=1;
+while(num >=1){
+  if(num>0){
+    fact=fact*num;
+  }
+  num--;
+} 
+console.log("factorial is:" + fact);
 */
 
-//let data1=1233;
-//console.log(1233);
-//console.log(data1);
-//let string="hello js"
-//console.log(string);
-//console.log(true);
-//console.log(false);
-//let num=Number(prompt("Enter 1st number"));
-//let num1=prompt("Enter 2nd number");
-//num1=Number(num1);
-//console.log(num+num1);
-//type casting
-// number->string
-//number->boolean
+let sum=0
+let i=1;
+while(i<=10){
+  if(i>0){
+    sum += i
+  }
+  i++;
+}
+console.log("Sum of number:" + sum);
 
-//string->number
-//string ->boolean
 
-// boolean->number
-// boolean->string
 
-// 1st conversion number to string
-let val=1234;
-console.log("Before the typecasting:"+" "+ typeof(val)+": "+val);
-val=String(val);
-console.log("After the typecasting:"+" "+ typeof(val)+" :"+val);
+/*
+let sum=0;
+let number=1;
+let temp=number;
+while(number<=1000){
+    while(temp>0){
+        let remainder = temp %10;
+        sum += remainder*remainder *remainder;
+        temp= parseInt(temp/10);
+    }
 
-//2nd conversion number to boolean
-let val1=12;
-console.log("Before the typecasting:"+" "+ typeof(val1)+": "+val1);
-val1=Boolean(val1);
-console.log("After the typecasting:"+" "+ typeof(val1)+" :"+val1);
-
-//3rd conversion string to number
-let val2="hello js";
-console.log("Before the typecasting:"+" "+ typeof(val2)+": "+val2);
-val2=Number(val2);
-console.log("After the typecasting:"+" "+ typeof(val2)+" :"+val2);
-
-//4th conversion string to boolean
-let val3="hello js";
-console.log("Before the typecasting:"+" "+ typeof(val3)+": "+val3);
-val3=Boolean(val3);
-console.log("After the typecasting:"+" "+ typeof(val3)+" :"+val3);
-
-let val6="";
-console.log("Before the typecasting:"+" "+ typeof(val6)+": "+val6);
-val6=Boolean(val6);
-console.log("After the typecasting:"+" "+ typeof(val6)+" :"+val6);
-
-//5th conversion  boolean to number
-let val4=true;
-console.log("Before the typecasting:"+" "+ typeof(val4)+": "+val4);
-val4=Number(val4);
-console.log("After the typecasting:"+" "+ typeof(val4)+" :"+val4);
-
-let val5=false;
-console.log("Before the typecasting:"+" "+ typeof(val5)+": "+val5);
-val5=Number(val5);
-console.log("After the typecasting:"+" "+ typeof(val5)+" :"+val5);
-
-//6th conversion  boolean to string
-let val7=true;
-console.log("Before the typecasting:"+" "+ typeof(val7)+": "+val7);
-val7=String(val7);
-console.log("After the typecasting:"+" "+ typeof(val7)+" :"+val7);
-
+}
+if(sum==number){
+    console.log(number);
+}
+*/
