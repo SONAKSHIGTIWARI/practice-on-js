@@ -1,5 +1,5 @@
-/*
 // Task
+
 //Take 2 number as user input and perform arithmetic operation..
 let a=Number(prompt("Enter first number:"));
 let b=Number(prompt("Enter second number:"));
@@ -10,9 +10,9 @@ console.log(a/b);
 console.log(a%b);
 
 // grater of (2/3/4)number using logical operator
-let num1=Number(prompt("Enter First number!"));
-let num2=Number(prompt("Enter Second number"));
-if (num1>num2){
+let num11=Number(prompt("Enter First number!"));
+let num12=Number(prompt("Enter Second number"));
+if (num11>num12){
     console.log("1st number is greater");
 }
 else{
@@ -35,7 +35,7 @@ else{
         console.log("r is greater");;
     }
 }
-    
+ 
 // among 4 humber
 let w=Number(prompt("Enter the value of w"));
 let x=Number(prompt("Enter the value of x"));
@@ -60,7 +60,6 @@ else{
 // make 3 menu driven program
 // 1. calculator
 let choice = prompt("Calculator Menu:\n1. Add\n2. Subtract\n3. Multiply\n4. Divide");
-
 let num1 = parseFloat(prompt("Enter first number:"));
 let num2 = parseFloat(prompt("Enter second number:"));
 let result;
@@ -118,7 +117,7 @@ switch (dayNumber) {
     alert("Invalid number. Enter 1 to 7.");
 }
 
-// 3. Simple Grade Checker
+// 3 simple grade checker
 
 let grade = prompt("Enter your grade letter (A, B, C, D, F):").toUpperCase();
 
@@ -142,7 +141,8 @@ switch (grade) {
     alert("Invalid grade.");
 }
 
-//3.Leap year chekar.
+//Leap year chekar.
+
 let year = prompt("Enter a year:");
 if (year) {
   if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
@@ -154,10 +154,9 @@ if (year) {
   alert("No year entered!");
 }
 
+//grading  based  on marks using  conditional statments
 
-// Ask the user for their score
 let score = Number(prompt("Enter your score:"));
-
 if (score >= 90) {
     console.log("Grade:A");
 } else if (score >= 80) {
@@ -170,17 +169,22 @@ if (score >= 90) {
   console.log("you are Fail");
 }
 
+//conditional using  ternary statement
 
 let evennumber=Number(prompt("Enter the number to check even or odd"));
 (evennumber%2==0)? console.log("Number is even") : console.log("Number is odd");
 
+// create number list (number of range) even number
+
  i =1
-whiletle(i<=100){
+while(i<=100){
   if(i %2==0){
     console.log(i);
   }
   i++;
 }
+
+// create number list (number of range) odd  number
 
 let i =1;
 while(i<=100){
@@ -190,6 +194,7 @@ while(i<=100){
   i++;
 }
 
+// create number list (number of range) multiple of 3
 
 i =1
 while(i<=100){
@@ -199,20 +204,23 @@ while(i<=100){
   i++;
 }
 
-let year=1000;
-while(year<=2050){
-  if (year) {
-    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-      console.log(year + " is a leap year.");
+// count using while loop(no.of leap year from a range)
+
+let years=1000;
+while(years<=2050){
+  if (years) {
+    if ((years % 4 === 0 && years % 100 !== 0) || (years % 400 === 0)) {
+      console.log(years + " is a leap year.");
     } else {
-     console.log(year + " is not a leap year.");
+     console.log(years + " is not a leap year.");
     }
   } else {
     console.log("No year entered!");
   }
-  year++;
+  years++;
 }
 
+// factorial using using while loop
 
 let num=5;
 let fact=1;
@@ -223,21 +231,21 @@ while(num >=1){
   num--;
 } 
 console.log("factorial is:" + fact);
-*/
 
-let sum=0
-let i=1;
+// sum of digit using  while loop
+
+let sum1=0
+let j=1;
 while(i<=10){
   if(i>0){
-    sum += i
+    sum1 += j
   }
-  i++;
+  j++;
 }
 console.log("Sum of number:" + sum);
 
+// armstrong strong number using while loop 
 
-
-/*
 let sum=0;
 let number=1;
 let temp=number;
@@ -252,4 +260,12 @@ while(number<=1000){
 if(sum==number){
     console.log(number);
 }
-*/
+
+// Do you  wish to continue
+do{
+    console.log("welcome")
+    choice = window.confirm("do you wish to continue")
+  
+  }while(choice == true)
+console.log("program completed !")
+  
