@@ -51,7 +51,7 @@ const user = {
     }
 };
 
-user.login(); // Output: cool_user has logged in
+user.login(); 
 
 
 
