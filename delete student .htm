@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Table with Delete</title>
+  <style>
+    .first {
+      background-color: blue !important;
+    }
+
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      padding: 8px 12px black
+      ;
+    }
+
+    button {
+      padding: 4px 8px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Student Table</h1>
+
+  <div class="container">
+    <div></div>
+  </div>
+
+  <script type="text/javascript">
+    
+    const table = document.createElement("table");
+    table.setAttribute("border", "1");
+
+    const tbody = document.createElement("tbody");
+    table.appendChild(tbody);
+
+
+    const students = [
+      { name: "student 1", rol: 1 },
+      { name: "student 2", rol: 2 },
+      { name: "student 3", rol: 3 },
+      { name: "student 4", rol: 4 },
+      { name: "student 5", rol: 5 },
+      { name: "student 6", rol: 6 },
+    ];
+
+    
+    students.forEach((student, index) => {
+      const row = document.createElement("tr");
+      const rowId = `row-${index + 1}`;
+      row.id = rowId;
+
+
+      const nameCell = document.createElement("td");
+      nameCell.textContent = student.name;
+
+      const rolCell = document.createElement("td");
+      rolCell.textContent = student.rol;
+
+      const actionCell = document.createElement("td");
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.className = "deletebtn";
+      deleteBtn.id = `delete-id-${index + 1}`;
+
+      
+      deleteBtn.addEventListener("click", () => {
+        const rowToDelete = document.getElementById(rowId);
+        if (rowToDelete) {
+          tbody.removeChild(rowToDelete);
+        }
+      });
+
+      actionCell.appendChild(deleteBtn);
+
+
+      row.appendChild(nameCell);
+      row.appendChild(rolCell);
+      row.appendChild(actionCell);
+
+      
+      tbody.appendChild(row);
+    });
+
+    
+    document.body.appendChild(table);
+  </script>
+</body>
+</html>
