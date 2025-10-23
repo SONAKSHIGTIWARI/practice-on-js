@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "113172554593",
+    "project_id": "ecomitra-17d0b",
+    "storage_bucket": "ecomitra-17d0b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113172554593:android:ed68429be6fcda9f8b5b20",
+        "android_client_info": {
+          "package_name": "com.example.ecomitra_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1DfGXOnB8fpnxwJD1TXrizkK1LDURaQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
